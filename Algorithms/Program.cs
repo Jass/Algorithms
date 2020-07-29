@@ -33,9 +33,11 @@ namespace Algorithms
             rwp.Run();
 
             */
-
+            /*
             Statistics.Roll3Dices roll3Dices = new Statistics.Roll3Dices();
-            
+            */
+
+            Statistics.Roll3Dices roll2Dices = new Statistics.Roll3Dices();
 
             Console.ReadKey();
         }
