@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 
 
 namespace Algorithms.Oreily_lectures
 {
-    public class Shellsort:ISort
+    public class ShellsortTestForLoop : ISort
     {
-        private static int interval = 4;
+        
         private string strToSort = "SORTEXAMPLE";
 
-        public Shellsort()
+        public ShellsortTestForLoop()
         {
-           
-            
+
+
         }
 
         int sort(char[] toSort)
@@ -23,7 +22,7 @@ namespace Algorithms.Oreily_lectures
             // then reduce the gap 
             for (int gap = n / 2; gap > 0; gap /= 2)
             {
-                Console.WriteLine("gap is {0}",gap);
+                Console.WriteLine("gap is {0}", gap);
                 // Do a gapped insertion sort for this gap size. 
                 // The first gap elements a[0..gap-1] are already 
                 // in gapped order keep adding one more element 
@@ -38,21 +37,20 @@ namespace Algorithms.Oreily_lectures
                     // shift earlier gap-sorted elements up until 
                     // the correct location for a[i] is found 
                     int j;
-                    for (j = i; j >= gap
-                            && toSort[j - gap] > temp; j -= gap)
-
+                    
+                    for (j = i; j >= gap ; j -= gap)
                     {
-
+                        if ( toSort[j - gap] > temp)
                         {
 
                             toSort[j] = toSort[j - gap];
-                            Console.WriteLine("--" + String.Concat(toSort));
-                        }
+                            Console.WriteLine("--shift" + String.Concat(toSort));
+                        } 
                     }
-
+                    toSort[j] = temp;
                     // put temp (the original a[i])  
                     // in its correct location 
-                    toSort[j] = temp;
+                   
                 }
 
                 Console.WriteLine("----end gap {0}-----{1}", gap, String.Concat(toSort));
@@ -67,7 +65,7 @@ namespace Algorithms.Oreily_lectures
             char[] toSort = strToSort.ToCharArray();
             sort(toSort);
 
-            
+
         }
     }
 }

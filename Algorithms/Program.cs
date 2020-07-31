@@ -37,7 +37,17 @@ namespace Algorithms
             Statistics.Roll3Dices roll3Dices = new Statistics.Roll3Dices();
             */
 
-            Statistics.Roll3Dices roll2Dices = new Statistics.Roll3Dices();
+            /*
+            Statistics.Roll2Dices roll2Dices = new Statistics.Roll2Dices();
+            */
+
+            Algorithms.Oreily_lectures.Shellsort shellsort = new Oreily_lectures.Shellsort();
+             shellsort.DoSort();
+            /*
+            Algorithms.Oreily_lectures.ShellsortTestForLoop test = new Oreily_lectures.ShellsortTestForLoop();
+            test.DoSort();
+
+            */
 
             Console.ReadKey();
         }
