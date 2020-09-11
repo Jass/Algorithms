@@ -8,5 +8,6 @@
   <ItemGroup>
     <Folder Include="Statistics\" />
     <Folder Include="Oreily_lectures\" />
+    <Folder Include="EricLippert\" />
   </ItemGroup>
 </Project>

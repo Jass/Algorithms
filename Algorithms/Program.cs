@@ -41,13 +41,16 @@ namespace Algorithms
             Statistics.Roll2Dices roll2Dices = new Statistics.Roll2Dices();
             */
 
-            Algorithms.Oreily_lectures.Shellsort shellsort = new Oreily_lectures.Shellsort();
-             shellsort.DoSort();
+            // Algorithms.Oreily_lectures.Shellsort shellsort = new Oreily_lectures.Shellsort();
+            // shellsort.DoSort();
             /*
             Algorithms.Oreily_lectures.ShellsortTestForLoop test = new Oreily_lectures.ShellsortTestForLoop();
             test.DoSort();
 
             */
+
+
+            EricLippert.ValueTypeMistery.RunValueTypeMistery();
 
             Console.ReadKey();
         }
