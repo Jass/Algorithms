@@ -19,26 +19,56 @@ namespace Algorithms.EricLippert
                 Console.WriteLine("x:{0}, y:{1}", this.x, this.y);
             }
 
-           public  S(int x, int y, Action _callback)
+           public  S(int x, int y)
             {
-                _callback();
                 this.x = x;
-                _callback();
                 this.y = y;
-                _callback();
+                callBackPrint();
             }
         }
 
 
+        public class NotS
+        {
+            int z;
+            int n;
+
+            public int Z { get { return z; } }
+            public int N { get { return n; } }
+
+            public void classCallBackPrint()
+            {
+                Console.WriteLine("local z:{0}, n:{1}", z, n);
+            }
+
+            public NotS()
+            {
+                z = n = 0;
+            }
+            public NotS(int x, int y)
+            {
+                classCallBackPrint();
+                z = x;
+                classCallBackPrint();
+                n = y;
+                classCallBackPrint();
+            }
+        }
+
         public static void RunValueTypeMistery()
         {
             S _s = new S();
-            _s = new S(12, 13, _s.callBackPrint);
+            NotS _nots = new NotS();
+            _s = new S(12, 13);
+            _nots = new NotS(31, 32);
 
             Console.WriteLine("------------");
 
             Action _callBack = () => { Console.WriteLine(" other x:{0}, y:{1}", _s.X, _s.Y); };
-            _s = new S(43, 44, _callBack);
+           // Action _callBack1 = () => { Console.WriteLine(" other x:{0}, y:{1}", _nots.Z,_nots.N); };
+
+            _s = new S(43, 44);
+            _nots = new NotS(55, 56);
         }
 
     }

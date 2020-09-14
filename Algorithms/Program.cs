@@ -50,7 +50,9 @@ namespace Algorithms
             */
 
 
-            EricLippert.ValueTypeMistery.RunValueTypeMistery();
+            //  EricLippert.ValueTypeMistery.RunValueTypeMistery();
+            Email.EmailBO _bo = new Email.EmailBO();
+            _bo.DoSend();
 
             Console.ReadKey();
         }

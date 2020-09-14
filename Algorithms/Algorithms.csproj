@@ -9,5 +9,9 @@
     <Folder Include="Statistics\" />
     <Folder Include="Oreily_lectures\" />
     <Folder Include="EricLippert\" />
+    <Folder Include="Email\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.8.0" />
   </ItemGroup>
 </Project>
